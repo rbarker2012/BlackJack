@@ -1,0 +1,143 @@
+#output {
+    font-size: 1.5em;
+}
+
+#btndeal,
+#myactions {
+    display: none;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 8px 20px;
+    background-color: white;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    font: normal 700 24px/1 "Calibri", sans-serif;
+}
+
+#cover {
+    height: 165px;
+    width: 120px;
+    padding: 3px;
+    background-color: brown;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid black;
+}
+
+.icard {
+    height: 165px;
+    width: 120px;
+    padding: 3px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 100px;
+    display: inline-block;
+    font-family: "Lato";
+}
+
+.top-card {
+    font-size: 30px;
+    line-height: 20px;
+    left: 2px;
+    top: 2px;
+}
+
+.content-card {
+    text-align: center;
+    font-size: 70px;
+}
+
+.bottom-card {
+    font-size: 30px;
+    line-height: 20px;
+    right: 2px;
+    bottom: px;
+    transform: rotate(-180deg);
+    -webkit-transform: rotat(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+}
+
+.clubs,
+.spades {
+    color: black;
+}
+
+.hearts,
+.diams {
+    color: crimson;
+}
+
+.hearts .suit::after {
+    content: "\2665";
+}
+
+.diams .suit::after {
+    content: "\2666";
+}
+
+.spades .suit::after {
+    content: "\2660";
+}
+
+.clubs .suit::after {
+    content: "\2663";
+}
+
+#dealerHolder,
+#playerHolder {
+    height: 180px;
+    width: 500px;
+}
+
+#message {
+    height: 90px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#btnhold {
+    background-color: green;
+}
+
+#btnhit {
+    background-color: red;
+}
+
+#btndeal {
+    background-color: blue;
+    font-size: 30px;
+}
+
+#btndouble {
+    background-color: forestgreen;
+    color: goldenrod;
+}
+
+#maxbet {
+    background-color: red;
+    font-size: 15px;
+}
+
+#btnstart {
+    background-color: black;
+}
+
+#mybet {
+    font-size: 30px;
+}
+
+#cbet {
+    font: normal 24px/1 "Calibri", sans-serif;
+}
+
+.total {
+    font-size: 30px;
+}
