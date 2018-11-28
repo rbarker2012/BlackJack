@@ -74,7 +74,7 @@ function dealNew() {
 
 function reshuffle() {
     cardCount++;
-    if (cardCount > 40) {
+    if (cardCount > 45) {
         console.log("New Deck");
         shuffleDeck(cards);
         cardCount = 0;
@@ -100,11 +100,13 @@ function deal() {
     pValue.innerHTML = checktotal(playerCard);
     dValue.innerHTML = checktotal(dealerCard);
 
-let playervalue = checktotal(playerCard);
-if (playervalue == 21 && playerCard.length == 2) {
-       playend();    
-    }
+    // let playervalue = checktotal(playerCard);
+    // if (playervalue == 21 && playerCard.length == 2) {
+    //    playend();    
+    //}
 }
+
+
 function cardOutput(n, x) {
     let hpos = x > 0 ? x * 60 + 100 : 100;
     return (
@@ -167,7 +169,7 @@ function playucard() {
     var rValu = checktotal(playerCard);
     pValue.innerHTML = rValu;
     if (rValu > 21) {
-        message.innerHTML = "BUSTED!";
+        message.innerHTML += "BUSTED!";
         playend();
     }
 }
@@ -196,7 +198,7 @@ function playend() {
     //check for winner
     let playervalue = checktotal(playerCard);
     if (playervalue == 21 && playerCard.length == 2) {
-        message.innerHTML = "Player Blackjack!";
+        message.innerHTML += "Player Blackjack!";
         payoutJack = 1.5;
     }
 
@@ -259,14 +261,8 @@ function shuffleDeck(array) {
 }
 
 function outputCard() {
-    output.innerHTML +=
-        "<span style='color:" +
-        cards[cardCount].bgcolor +
-        "'>" +
-        cards[cardCount].cardnum +
-        "&" +
-        cards[cardCount].icon +
-        ";</span> ";
+    output.innerHTML +="<span style='color:" + cards[cardCount].bgcolor +
+        "'>" + cards[cardCount].cardnum + "&" + cards[cardCount].icon + ";</span> ";
 }
 
 // let randomNum = Math.floor(Math.random()*52);
