@@ -67,9 +67,9 @@ function dealNew() {
         "Get upto 21 and beat the dealer to win.<br>Current bet is $" + betvalue;
     document.getElementById("mybet").disabled = true;
     document.getElementById("maxbet").disabled = true;
-    deal();
     document.getElementById("btndeal").style.display = "none";
     document.getElementById('dValue').innerHTML = "?";
+    deal();
 }
 
 function reshuffle() {
@@ -100,10 +100,10 @@ function deal() {
     pValue.innerHTML = checktotal(playerCard);
     dValue.innerHTML = checktotal(dealerCard);
 
-    // let playervalue = checktotal(playerCard);
-    // if (playervalue == 21 && playerCard.length == 2) {
-    //    playend();    
-    //}
+    let playervalue = checktotal(playerCard);
+    if (playervalue == 21 && playerCard.length == 2) {
+       playend();    
+    }
 }
 
 
